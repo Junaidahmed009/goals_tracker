@@ -1,61 +1,189 @@
-.add-quarter-container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+.add-goal-container {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  min-height: calc(100vh - 80px);
+  font-family: "Poppins", sans-serif;
 }
 
-.add-quarter-container h1 {
+.goal-form-card {
+  background: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 28px;
-  font-weight: bold;
 }
 
-.quarter-form {
+.form-subtitle {
+  color: #7f8c8d;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.goal-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
 }
 
-.quarter-form label {
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
   font-weight: 500;
-  margin-bottom: 5px;
 }
 
-.quarter-form input,
-.quarter-form textarea,
-.quarter-form select {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 14px 16px;
+  border: 1px solid #e0e3e7;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
   outline: none;
 }
 
-.quarter-form input:focus,
-.quarter-form textarea:focus,
-.quarter-form select:focus {
-  border-color: #555;
-}
-
-.quarter-form textarea {
+.form-group textarea {
   resize: vertical;
   min-height: 100px;
 }
 
-.next-btn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.2s;
+.form-row {
+  display: flex;
+  gap: 20px;
 }
 
-.next-btn:hover {
-  background-color: #0056b3;
+.form-row .form-group {
+  flex: 1;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #5a6fd1 0%, #6a42a0 100%);
+}
+
+.existing-goals {
+  margin-top: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.existing-goals-title {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.goal-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-5px);
+}
+
+.goal-card h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.goal-description {
+  color: #7f8c8d;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.goal-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-badge.in-progress {
+  background-color: #fff4e5;
+  color: #ffa726;
+}
+
+.status-badge.completed {
+  background-color: #e6f7ee;
+  color: #00c853;
+}
+
+.deadline {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+  .goal-form-card {
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
 }

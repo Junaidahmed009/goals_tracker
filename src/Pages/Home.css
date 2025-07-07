@@ -1,64 +1,152 @@
 .home-container {
   padding: 30px;
   background: linear-gradient(to right, #f8f9fa, #e0f7fa);
-  min-height: 100vh;
-  font-family: "Segoe UI", sans-serif;
-  position: relative;
+  min-height: calc(100vh - 80px);
+  font-family: "Poppins", sans-serif;
+  /* padding-top: 110px; Account for navbar height */
 }
 
-/* Top-left Add Button */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Add Quarter Button */
 .add-quarter-btn {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  background: linear-gradient(to right, #00796b, #26a69a);
+  position: fixed;
+  top: 100px;
+  right: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 30px;
   font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .add-quarter-btn:hover {
-  background: linear-gradient(to right, #004d40, #009688);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #5a6fd1 0%, #6a42a0 100%);
+}
+
+.btn-icon {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .home-title {
+  margin-top: 0;
   text-align: center;
-  font-size: 36px;
-  color: #333;
+  font-size: 2.5rem;
+  color: #2c3e50;
   margin-bottom: 40px;
+  font-weight: 600;
 }
 
 .quarters-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
+  padding: 20px 0;
 }
 
 .quarter-card {
+  margin: 0;
   background-color: white;
-  padding: 20px 30px;
+  padding: 25px;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  width: 280px;
+  transition: all 0.3s ease;
   cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .quarter-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .quarter-card h2 {
-  color: #00796b;
-  margin-bottom: 10px;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
 }
 
 .quarter-card p {
   color: #555;
-  margin: 5px 0;
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+/* Welcome Message */
+.welcome-message {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.welcome-message h1 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.welcome-message p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.progress-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.progress-bar-container {
+  flex: 1;
+  background-color: #ddd; /* visible even on white */
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #4caf50; /* green */
+  transition: width 0.4s ease-in-out;
+}
+
+.progress-percentage {
+  font-size: 0.9rem;
+  color: #333;
+  min-width: 30px;
 }
