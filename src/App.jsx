@@ -10,15 +10,15 @@ import AddGoal from "./Components/AddGoal.jsx";
 function App() {
   return (
     <>
-      {/* <BrowserRouter> */}
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/addquarter" element={<AddQuarter />} />
-        <Route path="/allgoals/:qid" element={<AllGoals />} />
-        <Route path="/addgoal/:qid" element={<AddGoal />} />
-      </Routes>
-      {/* </BrowserRouter> */}
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/addquarter" element={<AddQuarter />} />
+          <Route path="/allgoals/:qid" element={<AllGoals />} />
+          <Route path="/addgoal/:qid" element={<AddGoal />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
